@@ -1,0 +1,429 @@
+
+*** Running vivado
+    with args -log Tennis.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tennis.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Tennis.tcl -notrace
+Command: synth_design -top Tennis -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12532 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 809.461 ; gain = 177.863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Tennis' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/Tennis.v:25]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/debouncer.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/debouncer.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_divider' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/clk_divider.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (2#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/clk_divider.v:12]
+INFO: [Synth 8-6157] synthesizing module 'BallPositionUpdate' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/BallPositionUpdate.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'BallPositionUpdate' (3#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/BallPositionUpdate.v:25]
+INFO: [Synth 8-6157] synthesizing module 'GameplayController' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/GameplayController.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'GameplayController' (4#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/GameplayController.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ScoreKeeper' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/ScoreKeeper.v:23]
+	Parameter ZERO bound to: 7'b0111111 
+	Parameter ONE bound to: 7'b0000110 
+	Parameter TWO bound to: 7'b1011011 
+	Parameter THREE bound to: 7'b1001111 
+	Parameter FOUR bound to: 7'b1100110 
+	Parameter FIVE bound to: 7'b1101101 
+	Parameter SIX bound to: 7'b1111101 
+	Parameter SEVEN bound to: 7'b0000111 
+	Parameter EIGHT bound to: 7'b1111111 
+	Parameter NINE bound to: 7'b1101111 
+	Parameter P bound to: 7'b1110011 
+INFO: [Synth 8-6157] synthesizing module 'SevenSegmentLED' [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/SevenSegmentLED.v:3]
+	Parameter TOGGLE bound to: 17'b11000011010100000 
+INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentLED' (5#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/SevenSegmentLED.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ScoreKeeper' (6#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/ScoreKeeper.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Tennis' (7#1) [X:/Desktop/EC311Project/EC311Project.srcs/sources_1/new/Tennis.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 872.980 ; gain = 241.383
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 872.980 ; gain = 241.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 872.980 ; gain = 241.383
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [X:/Desktop/EC311Project/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [X:/Desktop/EC311Project/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Desktop/EC311Project/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Tennis_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Tennis_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 998.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 998.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "C_In" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     23 Bit       Adders := 3     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               56 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 3     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+	  12 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 54    
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clk_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module BallPositionUpdate 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+Module GameplayController 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 50    
+	   3 Input      1 Bit        Muxes := 1     
+Module SevenSegmentLED 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ScoreKeeper 
+Detailed RTL Component Info : 
++---Registers : 
+	               56 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  12 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[35]' (FD) to 'SCORE/C_In_reg[7]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[28]' (FD) to 'SCORE/C_In_reg[29]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[21]' (FD) to 'SCORE/C_In_reg[24]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[14]' (FD) to 'SCORE/C_In_reg[7]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[7]' (FD) to 'SCORE/C_In_reg[8]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[36]' (FD) to 'SCORE/C_In_reg[8]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[29]' (FD) to 'SCORE/C_In_reg[22]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[22]' (FD) to 'SCORE/C_In_reg[32]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[15]' (FD) to 'SCORE/C_In_reg[8]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[8]' (FD) to 'SCORE/C_In_reg[9]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[37]' (FD) to 'SCORE/C_In_reg[9]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[30]' (FD) to 'SCORE/C_In_reg[9]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[16]' (FD) to 'SCORE/C_In_reg[9]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[9]' (FD) to 'SCORE/C_In_reg[10]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[38]' (FD) to 'SCORE/C_In_reg[10]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[31]' (FD) to 'SCORE/C_In_reg[10]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[24]' (FD) to 'SCORE/C_In_reg[25]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[17]' (FD) to 'SCORE/C_In_reg[10]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[10]' (FD) to 'SCORE/C_In_reg[11]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[39]' (FD) to 'SCORE/C_In_reg[11]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[32]' (FD) to 'SCORE/C_In_reg[33]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[25]' (FD) to 'SCORE/C_In_reg[27]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[18]' (FD) to 'SCORE/C_In_reg[11]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[11]' (FD) to 'SCORE/C_In_reg[12]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[40]' (FD) to 'SCORE/C_In_reg[12]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[33]' (FD) to 'SCORE/C_In_reg[34]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[26]' (FD) to 'SCORE/C_In_reg[12]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[19]' (FD) to 'SCORE/C_In_reg[12]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[12]' (FD) to 'SCORE/C_In_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[41]' (FD) to 'SCORE/C_In_reg[13]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[20]' (FD) to 'SCORE/C_In_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SCORE/C_In_reg[13] )
+INFO: [Synth 8-3886] merging instance 'SCORE/AN_In_reg[1]' (FDR) to 'SCORE/AN_In_reg[5]'
+INFO: [Synth 8-3886] merging instance 'SCORE/AN_In_reg[2]' (FDR) to 'SCORE/AN_In_reg[5]'
+INFO: [Synth 8-3886] merging instance 'SCORE/AN_In_reg[3]' (FDR) to 'SCORE/AN_In_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SCORE/AN_In_reg[5] )
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[49]' (FD) to 'SCORE/C_In_reg[52]'
+INFO: [Synth 8-3886] merging instance 'SCORE/C_In_reg[0]' (FD) to 'SCORE/C_In_reg[3]'
+INFO: [Synth 8-3886] merging instance 'SCORE/SevenSegmentLED/AN_Out_reg[1]' (FDC) to 'SCORE/SevenSegmentLED/AN_Out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'SCORE/SevenSegmentLED/AN_Out_reg[2]' (FDC) to 'SCORE/SevenSegmentLED/AN_Out_reg[5]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 998.035 ; gain = 366.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    55|
+|3     |LUT1   |    21|
+|4     |LUT2   |    58|
+|5     |LUT3   |    23|
+|6     |LUT4   |    39|
+|7     |LUT5   |    18|
+|8     |LUT6   |    65|
+|9     |FDCE   |    59|
+|10    |FDRE   |   139|
+|11    |FDSE   |     8|
+|12    |IBUF   |     5|
+|13    |OBUF   |    31|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+-------------------+------+
+|      |Instance            |Module             |Cells |
++------+--------------------+-------------------+------+
+|1     |top                 |                   |   522|
+|2     |  BALL              |BallPositionUpdate |    42|
+|3     |  CD                |clk_divider        |    62|
+|4     |  GAME              |GameplayController |   129|
+|5     |  GM                |debouncer          |    47|
+|6     |  LD                |debouncer_0        |    47|
+|7     |  RD                |debouncer_1        |    46|
+|8     |  SCORE             |ScoreKeeper        |   112|
+|9     |    SevenSegmentLED |SevenSegmentLED    |    85|
++------+--------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1001.074 ; gain = 244.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1001.074 ; gain = 369.477
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1018.461 ; gain = 663.508
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.461 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'X:/Desktop/EC311Project/EC311Project.runs/synth_1/Tennis.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Tennis_utilization_synth.rpt -pb Tennis_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 22 16:17:44 2023...
